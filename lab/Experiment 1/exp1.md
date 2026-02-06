@@ -62,7 +62,17 @@ Docker is an open-source containerization platform that allows developers to bui
 
 ---
 
+
+![Download VirtualBox](screenshots/downloadvirtualbox.png)
+![VirtualBox Website](screenshots/virtualbox.png)
+![Vagrant Installation](screenshots/Vagrant.png)
+![Vagrant Up](screenshots/Vagrantup.png)
+![Vagrant SSH](screenshots/Vagrant.ssh.png)
+![Verifying Nginx](screenshots/Verifyingnginx.png)
+
 ## Procedure
+
+
 
 ### Step 1: Install Docker
 Download and install Docker Desktop from the official Docker website. After installation, start Docker Desktop.
@@ -71,6 +81,7 @@ Download and install Docker Desktop from the official Docker website. After inst
 
 Step 2: Verify WSL Installation
 wsl --list --verbose
+
 
 
 OR
