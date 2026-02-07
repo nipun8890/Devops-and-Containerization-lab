@@ -61,24 +61,29 @@ Docker is an open-source containerization platform that allows developers to bui
 - Git
 
 ---
-
-
 ![Download VirtualBox](screenshots/downloadvirtualbox.png)
+
 
 
 ![VirtualBox Website](screenshots/virtualbox.png)
 
 
-![Vagrant Installation](screenshots/Vagrant.png)
+
+![Vagrant Installation](screenshots/vagrant.png)
 
 
-![Vagrant Up](screenshots/Vagrantup.png)
+
+![Vagrant Up](screenshots/vagrant-up.png)
 
 
-![Vagrant SSH](screenshots/Vagrant.ssh.png)
+
+![Vagrant SSH](screenshots/vagrant-ssh.png)
 
 
-![Verifying Nginx](screenshots/Verifyingnginx.png)
+
+![Verifying Nginx](screenshots/verifying-nginx.png)
+
+
 
 ## Procedure
 
@@ -340,4 +345,14 @@ VirtualBox Documentation
 
 Vagrant Documentation
 
-Docker Official Documentation
+
+
+
+
+
+
+
+
+
+
+
