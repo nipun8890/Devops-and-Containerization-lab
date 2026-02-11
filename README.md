@@ -15,10 +15,9 @@ This experiment covers:
 - Deploying and verifying **Nginx** inside a VM
 
 📄 **Markdown File:**  
-👉 [Experiment 1 – Documentation](lab/Experiment%201/exp1.md)
+👉 [Experiment 1 – Documentation](./lab/Experiment%201/exp1.md)
 
-📂 **Screenshots Folder:**  
-👉 [Experiment 1 – Screenshots](lab/Experiment%201/screenshots)
+👉[Experiment 2 - Screenshots](./lab/Experiment%201/screenshots/vagrant.ssh.png)
 
 ---
 
@@ -31,10 +30,10 @@ This experiment focuses on:
 - Verifying, stopping, and removing containers
 
 📄 **Markdown File:**  
-👉 [Experiment 2 – Documentation](lab/Experiment%202/exp2.md)
+👉 [Experiment 2 – Documentation](./lab/Experiment%202/exp2.md)
 
 📂 **Screenshots Folder:**  
-👉 [Experiment 2 – Screenshots](lab/Experiment%202/Screenshots)
+👉 [Experiment 2 – Screenshots](./lab/Experiment%202/Screenshots)
 
 ---
 
