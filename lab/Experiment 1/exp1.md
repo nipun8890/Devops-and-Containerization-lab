@@ -62,13 +62,13 @@ Docker is an open-source containerization platform that allows developers to bui
 
 ![VirtualBox Website](screenshots/virtualbox.png)
 
-![Vagrant Installation](screenshots/vagrant.png)
+![VagrantInstallation](screenshots/vagrant.png)
 
-![Vagrant Up](screenshots/vagrantup.png)
+![VagrantUp](screenshots/vagrantup.png)
 
-![Vagrant SSH](screenshots/vagrant.ssh.png)
+![VagrantSSH](screenshots/vagrant.ssh.png)
 
-![Verifying Nginx](screenshots/verifyingnginx.png)
+![VerifyingNginx](screenshots/verifyingnginx.png)
 
 
 
