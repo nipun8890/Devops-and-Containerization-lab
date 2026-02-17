@@ -15,6 +15,7 @@
 ---
 
 ## Aim  
+
 To deploy the NGINX web server using different Docker base images and compare their image size, performance, layers, and security impact.
 
 ---
@@ -42,7 +43,9 @@ After completing this experiment, students will be able to:
   - `Dockerfile`
   - Port mapping  
 
+
 ![Docker Pull](Screenshots/dockerpull.png)
+
 
 
 ![Docker Run](Screenshots/dockerrun.png)
@@ -131,16 +134,16 @@ Each instruction in a Dockerfile creates a layer:
 
 ### Part 1 — Deploy NGINX Using Official Image
 
-### Step 1: Pull Image
+ ### Step 1: Pull Image
 
-```bash
 
 docker pull nginx:latest
 
-Step 2: Run Container
+### Step 2: Run Container
 
 docker run -d --name nginx-official -p 8080:80 nginx
-Step 3: Verify
+
+### Step 3: Verify
 
 curl http://localhost:8080
 
@@ -162,23 +165,30 @@ Medium size (~140MB)
 
 ### Part 2 — Custom NGINX Using Ubuntu Base Image
 
+
 ### Step 1: Create Dockerfile
 
 FROM ubuntu:22.04
 
 RUN apt-get update && \
-    apt-get install -y nginx && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+ apt-get install -y nginx && \
+ apt-get clean && \
+rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
-Step 2: Build Image
+
+### Step 2: Build Image
+
 docker build -t nginx-ubuntu .
-Step 3: Run Container
+
+### Step 3: Run Container
+
 docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
+
 Observations
+
 docker images nginx-ubuntu
 Large image (~220MB+)
 
@@ -190,9 +200,13 @@ Slower startup
 
 Larger attack surface
 
-Part 3 — Custom NGINX Using Alpine Base Image
 
-Step 1: Create Dockerfile
+
+### Part 3 — Custom NGINX Using Alpine Base Image
+
+
+
+### Step 1: Create Dockerfile
 
 FROM alpine:latest
 
@@ -205,7 +219,8 @@ CMD ["nginx", "-g", "daemon off;"]
 ### Step 2: Build Image
 
 docker build -t nginx-alpine .
-Step 3: Run Container
+
+### Step 3: Run Container
 
 docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 Observations
@@ -224,6 +239,9 @@ More secure
 
 ### Part 4 — Compare Image Sizes
 
+
+
+
 docker images | grep nginx
 Sample Output
 
@@ -233,8 +251,15 @@ nginx:latest	~140MB
 nginx-ubuntu	~220MB+
 nginx-alpine	~25MB
 
+
+
 ### Part 5 — Inspect Image Layers
+
+
+
 Commands
+
+
 
 docker history nginx
 
@@ -250,15 +275,19 @@ Alpine → Minimal layers
 
 Official → Optimized layers
 
+
+
 ### Part 6 — Serve Custom HTML Page
 
-Step 1: Create HTML
+
+
+### Step 1: Create HTML
 
 mkdir html
 
 echo "<h1>Hello from Docker NGINX</h1>" > html/index.html
 
-Step 2: Run Container with Volume
+### Step 2: Run Container with Volume
 
 docker run -d \
 
@@ -269,11 +298,13 @@ docker run -d \
 
   nginx
 
-Step 3: Verify
+### Step 3: Verify
 
 Open:
 
 http://localhost:8083
+
+
 
 ### Part 7 — Real World Uses of NGINX
 
@@ -293,7 +324,7 @@ Kubernetes ingress controller
 
 Microservices frontend
 
-Comparison Summary
+### Comparison Summary
 
 Feature	Official	Ubuntu	Alpine
 
@@ -344,13 +375,14 @@ Enable basic authentication
 
 Reduce layers and rebuild
 
-Explain:
+### Explain:
 
 Why Alpine is smaller
 
 Why Ubuntu is not preferred in production
 
-Viva Questions
+### Viva Questions
+
 What is NGINX?
 
 What is Docker?
@@ -367,7 +399,8 @@ What is reverse proxy?
 
 How does NGINX improve performance?
 
-Learning Outcomes
+### Learning Outcomes
+
 After completing this experiment, students can:
 
 Deploy web servers in containers
