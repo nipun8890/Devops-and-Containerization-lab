@@ -74,7 +74,7 @@ To remove the container: docker rm <container_id>
 
 ![Docker Stop](./Screenshots/dockerstop.png)
 
-![Docker RM](./Screenshots/dockergitadd.png)
+![Docker RM](./Screenshots/dockerrm.png)
 
 
 
