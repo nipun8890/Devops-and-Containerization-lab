@@ -33,7 +33,7 @@ This command downloads the latest official Nginx image to the local system.
 
 ### Step 2: Run Container with Port Mapping
 
-![Docker Run](Screenshots/dockerrun.png)
+![Docker Run](./Screenshots/dockerrun.png)
 
 
 Run the Nginx container in detached mode with port mapping: docker run -d -p 8080:80 nginx 
@@ -45,10 +45,10 @@ Explanation:
  nginx → Docker image name
 
 ### Step 3: Verify Running Containers
-![Docker Run Nginx](Screenshots/dockerrun.nginx.png)
+![Docker Run Nginx](./Screenshots/dockerrun.nginx.png)
 
 
-![Docker PS](Screenshots/dockerps.png)
+![Docker PS](./Screenshots/dockerps.png)
 
 
 
@@ -61,7 +61,7 @@ This displays the container ID, image name, status, and port mapping.
 
 ### Step 4: Stop and Remove Container To stop the running container: docker stop <container_id>
 
-![Docker Stop](Screenshots/dockerstop.png)
+![Docker Stop](./Screenshots/dockerstop.png)
 
 
 
@@ -72,9 +72,9 @@ To remove the container: docker rm <container_id>
 
 ### Step 5: Remove Docker Image To remove the downloaded image: docker rmi nginx 
 
-![Docker Stop](Screenshots/dockerstop.png)
+![Docker Stop](./Screenshots/dockerstop.png)
 
-![Docker RM](Screenshots/dockergitadd.png)
+![Docker RM](./Screenshots/dockergitadd.png)
 
 
 

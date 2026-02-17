@@ -35,7 +35,6 @@ This experiment focuses on:
 📂 **Screenshots Folder:**  
 👉 [Experiment 2 – Screenshots](./lab/Experiment%202/Screenshots)
 
----
 
 ## 📘 Theory
 Theoretical concepts related to DevOps and Containerization are available here:
