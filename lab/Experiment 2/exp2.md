@@ -81,7 +81,7 @@ To remove the container: docker rm <container_id>
 This frees disk space by deleting the unused image.
 
 Result
-
+                                                                                          
 Docker images were successfully pulled, containers were executed, and container lifecycle management commands were performed successfully.
 
 Conclusion

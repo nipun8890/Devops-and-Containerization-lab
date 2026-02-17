@@ -139,11 +139,15 @@ Each instruction in a Dockerfile creates a layer:
 
 docker pull nginx:latest
 
+
 ### Step 2: Run Container
+
 
 docker run -d --name nginx-official -p 8080:80 nginx
 
+
 ### Step 3: Verify
+
 
 curl http://localhost:8080
 
@@ -163,10 +167,12 @@ Production ready
 
 Medium size (~140MB)
 
+
 ### Part 2 — Custom NGINX Using Ubuntu Base Image
 
 
 ### Step 1: Create Dockerfile
+
 
 FROM ubuntu:22.04
 
@@ -179,11 +185,15 @@ EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
 
+
 ### Step 2: Build Image
+
 
 docker build -t nginx-ubuntu .
 
+
 ### Step 3: Run Container
+
 
 docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 
@@ -216,11 +226,15 @@ EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
 
+
 ### Step 2: Build Image
+
 
 docker build -t nginx-alpine .
 
+
 ### Step 3: Run Container
+
 
 docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 Observations
@@ -236,6 +250,7 @@ Faster pull time
 Faster startup
 
 More secure
+
 
 ### Part 4 — Compare Image Sizes
 
@@ -283,11 +298,14 @@ Official → Optimized layers
 
 ### Step 1: Create HTML
 
+
 mkdir html
 
 echo "<h1>Hello from Docker NGINX</h1>" > html/index.html
 
+
 ### Step 2: Run Container with Volume
+
 
 docker run -d \
 
@@ -298,7 +316,9 @@ docker run -d \
 
   nginx
 
+
 ### Step 3: Verify
+
 
 Open:
 
@@ -307,6 +327,7 @@ http://localhost:8083
 
 
 ### Part 7 — Real World Uses of NGINX
+
 
 NGINX is commonly used for:
 
@@ -323,6 +344,7 @@ API gateway
 Kubernetes ingress controller
 
 Microservices frontend
+
 
 ### Comparison Summary
 
@@ -375,13 +397,17 @@ Enable basic authentication
 
 Reduce layers and rebuild
 
+
 ### Explain:
+
 
 Why Alpine is smaller
 
 Why Ubuntu is not preferred in production
 
+
 ### Viva Questions
+
 
 What is NGINX?
 
@@ -399,7 +425,10 @@ What is reverse proxy?
 
 How does NGINX improve performance?
 
+
 ### Learning Outcomes
+
+
 
 After completing this experiment, students can:
 
@@ -415,7 +444,10 @@ Improve security practices
 
 Use NGINX in production systems
 
+
+
 ### Conclusion
+
 
 This experiment demonstrates that:
 
