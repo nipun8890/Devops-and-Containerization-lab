@@ -1,10 +1,14 @@
-Experiment 4: Docker Essentials
 
-Name:  Nipun Agrawal 
-Roll No: R2142230048
-SAP ID: 500119472
-School: School of Computer Science
-University: University of Petroleum and Energy Studies, Dehradun
+
+***Name:***  Nipun Agrawal 
+
+***Roll No***: R2142230048
+
+***SAP ID***: 500119472
+
+***School***: School of Computer Science
+
+***University***: University of Petroleum and Energy Studies, Dehradun
 
 
 ![build](Screenshots/buildt.png)
@@ -83,7 +87,9 @@ if __name__ == '__main__':
 requirements.txt
 Flask==2.3.3
 ### Step 2: Create Dockerfile
+
 Dockerfile
+
 # Use Python base image
 FROM python:3.9-slim
 
@@ -150,7 +156,8 @@ Increases security
 
 ### Part 3: Building Docker Images
 
- Step 1: Basic Build
+ ### Step 1: Basic Build
+
 docker build -t my-flask-app .
 
 docker images
