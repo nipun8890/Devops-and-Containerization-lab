@@ -7,7 +7,7 @@ School: School of Computer Science
 University: University of Petroleum and Energy Studies, Dehradun
 
 
-![build](Screenshots/buildit.png)
+![build](Screenshots/buildt.png)
 ![curllocalhost](Screenshots/curllocalhost.png)
 ![dckerimages](Screenshots/dckerimages.png)
 ![dockerlogflask](Screenshots/dockerlogflask.png)
