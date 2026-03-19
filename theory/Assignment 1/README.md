@@ -5,31 +5,28 @@
 
 ---
 ## 📸 Screenshots
+## 📸 Screenshots
 
-###  Docker Compose Running
+### 🔹 Docker Compose Running
 ![Compose](screenshots/screenshot1.png)
 
-###  Running Containers
+### 🔹 Running Containers
 ![Containers](screenshots/screenshot2.png)
 
-###  Network Inspect
+### 🔹 Network Inspect
 ![Network](screenshots/screenshot3.png)
 
-###  Container IP Address
+### 🔹 Container IP Address
 ![IP](screenshots/screenshot4.png)
 
-###  Health API
+### 🔹 Health API
 ![Health](screenshots/screenshot5.png)
 
-###  Insert API
+### 🔹 Insert API
 ![Insert](screenshots/screenshot6.png)
 
-###  Fetch API
+### 🔹 Fetch API
 ![Fetch](screenshots/screenshot7.png)
-
-###  Volume Persistence
-![Volume](screenshots/screenshot8.png)
-
 ##  Overview
 
 This project demonstrates a containerized web application using **FastAPI** and **PostgreSQL**.  
