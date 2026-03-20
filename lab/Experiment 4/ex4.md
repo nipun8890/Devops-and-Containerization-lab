@@ -12,39 +12,72 @@
 
 ##  Screenshots
 
+
 ## Outputs
 
-![Step 1](Screenshots/screenshot1.png)
-![Step 2](Screenshots/screenshot2.png)
-![Step 3](Screenshots/screenshot3.png)
-![Step 4](Screenshots/screenshot4.png)
-![Step 5](Screenshots/screenshot5.png)
-![Step 6](Screenshots/screenshot6.png)
-![Step 7](Screenshots/screenshot7.png)
-![Step 8](Screenshots/screenshot8.png)
-![Step 9](Screenshots/screenshot9.png)
-![Step 10](Screenshots/screenshot10.png)
-![Step 11](Screenshots/screenshot11.png)
-![Step 12](Screenshots/screenshot12.png)
-![Step 13](Screenshots/screenshot13.png)
-![Step 14](Screenshots/screenshot14.png)
-![Step 15](Screenshots/screenshot15.png)
-![Step 16](Screenshots/screenshot16.png)
-![Step 17](Screenshots/screenshot17.png)
-![Step 18](Screenshots/screenshot18.png)
-![Step 19](Screenshots/screenshot19.png)
-![Step 20](Screenshots/screenshot20.png)
-![Step 21](Screenshots/screenshot21.png)
-![Step 22](Screenshots/screenshot22.png)
-![Step 23](Screenshots/screenshot23.png)
-![Step 24](Screenshots/screenshot24.png)
-![Step 25](Screenshots/screenshot25.png)
-![Step 26](Screenshots/screenshot26.png)
-![Step 27](Screenshots/screenshot27.png)
-![Step 28](Screenshots/screenshot28.png)
-![Step 29](Screenshots/screenshot29.png)
-![Step 30](Screenshots/screenshot30.png)
+![Step 1](./Screenshots/screenshot1.png)
 
+![Step 2](./Screenshots/screenshot2.png)
+
+![Step 3](./Screenshots/screenshot3.png)
+
+![Step 4](./Screenshots/screenshot4.png)
+
+![Step 5](./Screenshots/screenshot5.png)
+
+![Step 6](./Screenshots/screenshot6.png)
+
+![Step 7](./Screenshots/screenshot7.png)
+
+![Step 8](./Screenshots/screenshot8.png)
+
+![Step 9](./Screenshots/screenshot9.png)
+
+![Step 10](./Screenshots/screenshot10.png)
+
+![Step 11](./Screenshots/screenshot11.png)
+
+![Step 12](./Screenshots/screenshot12.png)
+
+![Step 13](./Screenshots/screenshot13.png)
+
+![Step 14](./Screenshots/screenshot14.png)
+
+![Step 15](./Screenshots/screenshot15.png)
+
+![Step 16](./Screenshots/screenshot16.png)
+
+
+![Step 17](./Screenshots/screenshot17.png)
+
+![Step 18](./Screenshots/screenshot18.png)
+
+![Step 19](./Screenshots/screenshot19.png)
+
+![Step 20](./Screenshots/screenshot20.png)
+
+
+![Step 21](./Screenshots/screenshot21.png)
+
+![Step 22](./Screenshots/screenshot22.png)
+
+![Step 23](./Screenshots/screenshot23.png)
+
+![Step 24](./Screenshots/screenshot24.png)
+
+![Step 25](./Screenshots/screenshot25.png)
+
+![Step 26](./Screenshots/screenshot26.png)
+
+![Step 27](./Screenshots/screenshot27.png)
+
+![Step 28](./Screenshots/screenshot28.png)
+
+![Step 29](./Screenshots/screenshot29.png)
+
+![Step 30](./Screenshots/screenshot30.png)
+
+![Step 31](./Screenshots/screenshot31.png)
 
 
 ### Part 1: Containerizing Applications with Dockerfile
