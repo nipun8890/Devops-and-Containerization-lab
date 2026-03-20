@@ -10,49 +10,40 @@
 
 ***University***: University of Petroleum and Energy Studies, Dehradun
 
+##  Screenshots
 
-![build](Screenshots/buildt.png)
-![curllocalhost](Screenshots/curllocalhost.png)
-![dckerimages](Screenshots/dckerimages.png)
-![dockerlogflask](Screenshots/dockerlogflask.png)
-![dockerps-a](Screenshots/dockerps-a.png)
-![dockerrm-f](Screenshots/dockerrm-f.png)
-![grepflask](Screenshots/grepflask.png)
-![loadbuild](Screenshots/loadbuild.png)
-![multistage](Screenshots/multistage.png)
-![myflaskapp](Screenshots/myflaskapp.png)
+## Outputs
 
-![Screenshot](Screenshots/Screenshot%202026-02-18%20083835.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20083843.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20084112.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20084240.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20084413.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20084421.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20084702.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20084709.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20084901.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20085227.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20091330.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20091339.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20093147.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165059.png)
-
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165105.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165203.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165211.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165437.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165519.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165745.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165757.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165912.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165926.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20165954.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20170033.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20170251.png)
-
-![Screenshot](Screenshots/Screenshot%202026-02-18%20170439.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20170451.png)
-![Screenshot](Screenshots/Screenshot%202026-02-18%20170528.png)
+![Step 1](Screenshots/screenshot1.png)
+![Step 2](Screenshots/screenshot2.png)
+![Step 3](Screenshots/screenshot3.png)
+![Step 4](Screenshots/screenshot4.png)
+![Step 5](Screenshots/screenshot5.png)
+![Step 6](Screenshots/screenshot6.png)
+![Step 7](Screenshots/screenshot7.png)
+![Step 8](Screenshots/screenshot8.png)
+![Step 9](Screenshots/screenshot9.png)
+![Step 10](Screenshots/screenshot10.png)
+![Step 11](Screenshots/screenshot11.png)
+![Step 12](Screenshots/screenshot12.png)
+![Step 13](Screenshots/screenshot13.png)
+![Step 14](Screenshots/screenshot14.png)
+![Step 15](Screenshots/screenshot15.png)
+![Step 16](Screenshots/screenshot16.png)
+![Step 17](Screenshots/screenshot17.png)
+![Step 18](Screenshots/screenshot18.png)
+![Step 19](Screenshots/screenshot19.png)
+![Step 20](Screenshots/screenshot20.png)
+![Step 21](Screenshots/screenshot21.png)
+![Step 22](Screenshots/screenshot22.png)
+![Step 23](Screenshots/screenshot23.png)
+![Step 24](Screenshots/screenshot24.png)
+![Step 25](Screenshots/screenshot25.png)
+![Step 26](Screenshots/screenshot26.png)
+![Step 27](Screenshots/screenshot27.png)
+![Step 28](Screenshots/screenshot28.png)
+![Step 29](Screenshots/screenshot29.png)
+![Step 30](Screenshots/screenshot30.png)
 
 
 
@@ -156,6 +147,7 @@ Increases security
 
 ### Part 3: Building Docker Images
 
+
  ### Step 1: Basic Build
 
 docker build -t my-flask-app .
@@ -182,6 +174,8 @@ docker images
 docker history my-flask-app
 
 docker inspect my-flask-app
+
+
 
 ###  Part 4: Running Containers
 
@@ -266,6 +260,8 @@ flask-regular → ~250MB
 
 flask-multistage → ~150MB
 
+
+
 ### Part 6: Publishing to Docker Hub
 
  Login & Push
@@ -279,6 +275,7 @@ docker pull username/my-flask-app:latest
 docker run -d -p 5000:5000 username/my-flask-app:latest
 
 ###  Part 7: Node.js Example
+
 
 
 ###  Step 1: Create App
@@ -330,6 +327,7 @@ docker run -d -p 3000:3000 --name node-container my-node-app
 curl http://localhost:3000
 
 
+
 ### Essential Docker Commands 
 
 Command	Purpose	Example
@@ -346,6 +344,7 @@ docker rmi	Remove image	docker rmi image-name
 docker logs	View logs	docker logs container-name
 docker exec	Execute command	docker exec -it container-name bash
 
+
 ###  Workflow Summary
 
 Development Workflow
@@ -358,13 +357,18 @@ docker pull myapp:v1.0
 docker run -d -p 80:8080 --name prod-app myapp:v1.0
 docker logs -f prod-app
 
+
 ### Cleanup Commands
+
 
 docker container prune
 docker image prune
 docker system prune -a
 
+
+
 ###  Key Takeaways
+
 
 Dockerfile defines how to build images
 
@@ -375,6 +379,8 @@ Tagging helps version control
 Multi-stage builds reduce size
 
 Always test locally before publishing
+
+
 
 ### Conclusion
 
