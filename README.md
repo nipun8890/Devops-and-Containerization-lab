@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Containerization-DevOps</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #24292e;
+        }
+
+        h1, h2 {
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 5px;
+        }
+
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .desc {
+            color: #586069;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 10px;
+            background: #24292e;
+            color: white;
+            border-radius: 6px;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Containerization-DevOps</h1>
+
+<a class="btn" href="https://github.com/nipun8890/Devops-and-Containerization-lab">View on GitHub Repository</a>
+
+<p>
+<b>GitHub Repository:</b> 
+<a href="https://github.com/nipun8890/Devops-and-Containerization-lab">
+https://github.com/nipun8890/Devops-and-Containerization-lab
+</a>
+</p>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Course:</b> Containerization and DevOps Lab
+</p>
+
+---
+
+<h2>Assignment 1 - Project</h2>
+
+<ul>
+    <li><a href="#">Container-WebApp</a></li>
+</ul>
+
+---
+
+<h2>Lab</h2>
+
+<ul>
+
+    <li>
+        <a href="lab/Experiment%201/exp1.html">
+        Experiment 1: Virtual Machines vs Containers
+        </a>
+        <div class="desc">
+        Compares virtualization and containerization architecture, performance, and use cases.
+        </div>
+    </li>
+
+    <li>
+        <a href="lab/Experiment%202/exp2.html">
+        Experiment 2: Docker Installation, Configuration, and Running Images
+        </a>
+        <div class="desc">
+        Covers Docker setup, validation, and running first containers/images.
+        </div>
+    </li>
+
+    <li>
+        <a href="lab/Experiment%203/exp3.html">
+        Experiment 3: Deploying NGINX Using Different Base Images and Comparing Image Layers
+        </a>
+        <div class="desc">
+        Demonstrates NGINX deployment with multiple base images and layer-size analysis.
+        </div>
+    </li>
+
+    <li>
+        <a href="lab/Experiment%204/exp4.html">
+        Experiment 4: Docker Essentials
+        </a>
+        <div class="desc">
+        Practices core Docker commands for images, containers, networking, and lifecycle.
+        </div>
+    </li>
+
+</ul>
+
+---
+
+<h2>Theory</h2>
+
+<ul>
+    <li><a href="theory/index.html">DevOps Theory Notes</a></li>
+</ul>
+
+</body>
+</html>
