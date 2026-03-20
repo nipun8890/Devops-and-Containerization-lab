@@ -1,77 +1,109 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>DevOps Lab</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #0d1117;
-      color: white;
-      margin: 0;
-      padding: 20px;
-    }
+#  DevOps and Containerization Lab
 
-    h1 {
-      text-align: center;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
+.navbar {
+  background: #0d1117;
+  padding: 12px;
+  border-radius: 8px;
+}
 
-    .card {
-      background: #161b22;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+.container {
+  margin-top: 20px;
+}
 
-    a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #238636;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-  </style>
-</head>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-<body>
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
 
-<h1>🚀 DevOps and Containerization Lab</h1>
+.card:hover {
+  transform: translateY(-5px);
+}
 
-<div class="grid">
+.button {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #238636;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+</style>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#experiments">Experiments</a>
+  <a href="#about">About</a>
+</div>
+
+---
+
+## 👋 Welcome
+
+This repository contains all my **DevOps & Containerization Lab Experiments**.
+
+---
+
+## 🧪 Experiments
+<div id="experiments" class="container grid">
 
 <div class="card">
-<h3>Experiment 1</h3>
-<a href="lab/Experiment%201/exp1.md">View</a>
+<h3>🧪 Experiment 1</h3>
+<p>Introduction to Docker</p>
+<a class="button" href="Experiment%201/exp1.md">View</a>
 </div>
 
 <div class="card">
-<h3>Experiment 2</h3>
-<a href="lab/Experiment%202/exp2.md">View</a>
+<h3>🧪 Experiment 2</h3>
+<p>Docker Commands & Images</p>
+<a class="button" href="Experiment%202/exp2.md">View</a>
 </div>
 
 <div class="card">
-<h3>Experiment 3</h3>
-<a href="lab/Experiment%203/exp3.md">View</a>
+<h3>🧪 Experiment 3</h3>
+<p>Docker Compose & Multi-container</p>
+<a class="button" href="Experiment%203/exp3.md">View</a>
 </div>
 
 <div class="card">
-<h3>Experiment 4</h3>
-<a href="lab/Experiment%204/ex4.md">View</a>
+<h3>🧪 Experiment 4</h3>
+<p>Dockerfile, Tagging & Publishing</p>
+<a class="button" href="Experiment%204/ex4.md">View</a>
 </div>
 
 </div>
 
-</body>
-</html>
+---
+
+## 👨‍💻 About Me
+<div id="about">
+
+- **Name:** Nipun Agrawal  
+- **Course:** B.Tech CSE  
+- **Subject:** DevOps & Containerization  
+
+</div>
+
+---
+
