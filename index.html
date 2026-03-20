@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DevOps & Containerization Lab</title>
+    <title>Containerization & DevOps Lab</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
+            font-family: Arial, sans-serif;
             background: #f4f6f8;
         }
 
-        .header {
-            background: #0d1117;
+        /* HEADER */
+        header {
+            background: #0d1b2a;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 30px 10px;
         }
 
-        .header h1 {
+        header h1 {
             margin: 0;
+            font-size: 32px;
         }
 
+        header p {
+            margin-top: 5px;
+            color: #ccc;
+        }
+
+        /* GRID */
         .container {
-            width: 85%;
-            margin: 40px auto;
+            padding: 40px;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
+        /* CARD */
         .card {
             background: white;
             padding: 20px;
@@ -44,60 +52,70 @@
 
         .card:hover {
             transform: translateY(-5px);
-            background: #e3f2fd;
+            background: #eaf4ff;
         }
 
         .card h2 {
-            margin-top: 0;
-            color: #1976d2;
+            margin: 0;
+            color: #0077cc;
         }
 
-        .footer {
+        .card p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d1b2a;
+            color: white;
             text-align: center;
             padding: 15px;
             margin-top: 30px;
-            background: #0d1117;
-            color: white;
         }
     </style>
 </head>
 
 <body>
 
-<div class="header">
+<header>
     <h1>Containerization & DevOps Lab</h1>
     <p>Nipun Agrawal | UPES Dehradun</p>
-</div>
+</header>
 
 <div class="container">
+    <div class="grid">
 
-<div class="grid">
+        <!-- EXP 1 -->
+        <a class="card" href="lab/Experiment%201/exp1.html">
+            <h2>Experiment 1</h2>
+            <p>Introduction to Docker & Containerization</p>
+        </a>
 
-<a href="lab/experiment1/exp1.html">
-    <h2>Experiment 1</h2>
-  <p>Introduction to Docker & Containerization</p>
-</a>
-<a href="lab/experiment2/exp2.html"></a>
-  <h2>Experiment 2</h2>
-  <p>Docker Installation & Running Containers</p>
-</a>
+        <!-- EXP 2 -->
+        <a class="card" href="lab/Experiment%202/exp2.html">
+            <h2>Experiment 2</h2>
+            <p>Docker Installation & Running Containers</p>
+        </a>
 
-<a href="lab/experiment3/exp3.html"></a>
-  <h2>Experiment 3</h2>
-  <p>NGINX Deployment & Image Comparison</p>
-</a>
+        <!-- EXP 3 -->
+        <a class="card" href="lab/Experiment%203/exp3.html">
+            <h2>Experiment 3</h2>
+            <p>NGINX Deployment & Image Comparison</p>
+        </a>
 
-<a href="lab/experiment4/exp4.html"></a>
-  <h2>Experiment 4</h2>
-  <p>Docker Essentials & Multi-stage Builds</p>
-</a>
+        <!-- EXP 4 -->
+        <a class="card" href="lab/Experiment%204/exp4.html">
+            <h2>Experiment 4</h2>
+            <p>Docker Essentials & Multi-stage Builds</p>
+        </a>
 
+    </div>
 </div>
-</div>
 
-<div class="footer">
-    <p>© 2026 Nipun Agrawal | DevOps Lab</p>
-</div>
+<footer>
+    © 2026 Nipun Agrawal | DevOps Lab
+</footer>
 
 </body>
 </html>
