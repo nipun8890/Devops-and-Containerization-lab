@@ -1,103 +1,159 @@
-Name: Nipun Agrawal 
-Roll no: R2142230048 Sap-ID: 500119472 School of Computer Science,
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 2 - Docker</title>
 
-University of Petroleum and Energy Studies, Dehradun
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
 
-EXPERIMENT – 2
-Docker Installation, Configuration, and Running Images
+        .navbar {
+            background: #0d1117;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
 
-Aim
-To install and configure Docker, pull Docker images, run containers and manage the container lifecycle using Docker commands.
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-Objectives
- To pull Docker images from Docker Hub  To run containers with port mapping  To verify running containers  To manage container lifecycle (start, stop, remove)
+        h1 { color: #1976d2; }
+        h2 { border-bottom: 2px solid #ddd; padding-bottom: 5px; }
 
-Theory
-Docker is an open-source containerization platform that allows applications to be packaged along with their dependencies into lightweight, portable containers. Containers run on a shared operating system kernel, making them faster and more resource-efficient than traditional virtual machines.
+        img {
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
 
-A Docker Image is a read-only template used to create containers. A Docker Container is a running instance of a Docker image. Docker uses a client–server architecture, where the Docker client communicates with the Docker daemon to build, run, and manage containers.
+        code {
+            display: block;
+            background: #eee;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
 
-Software Requirements
- Windows OS  Docker Desktop with WSL integration  Ubuntu (WSL distribution)
+        ul {
+            line-height: 1.6;
+        }
+    </style>
+</head>
 
-Procedure / Steps to Perform the Experiment
+<body>
 
-### Step 1: Pull Docker Image
+<div class="navbar">Home</div>
 
-![Docker Pull](Screenshots/dockerpull.png)
+<div class="container">
 
+<h1>Experiment 2</h1>
+<p><b>Docker Installation, Configuration, and Running Images</b></p>
 
-The Nginx image is pulled from Docker Hub using the following command: docker pull nginx 
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>Roll No:</b> R2142230048 <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>University:</b> UPES Dehradun
+</p>
 
-This command downloads the latest official Nginx image to the local system.
+<h2>Aim</h2>
+<p>
+To install Docker, pull images, run containers, and manage container lifecycle.
+</p>
 
-### Step 2: Run Container with Port Mapping
+<h2>Objectives</h2>
+<ul>
+<li>Pull Docker images from Docker Hub</li>
+<li>Run containers with port mapping</li>
+<li>Verify running containers</li>
+<li>Manage container lifecycle</li>
+</ul>
 
-![Docker Run](./Screenshots/dockerrun.png)
+<h2>Theory</h2>
+<p>
+Docker is a containerization platform that packages applications with dependencies into containers.
+Containers are lightweight and faster than virtual machines.
+</p>
 
+<p>
+A <b>Docker Image</b> is a template. A <b>Docker Container</b> is a running instance of that image.
+</p>
 
-Run the Nginx container in detached mode with port mapping: docker run -d -p 8080:80 nginx 
+<h2>Software Requirements</h2>
+<ul>
+<li>Windows OS</li>
+<li>Docker Desktop (WSL)</li>
+<li>Ubuntu</li>
+</ul>
 
-Explanation:
+<h2>Procedure</h2>
 
- -d → Runs container in background  -p 8080:80 → Maps host port 8080 to container port 80 
+<h3>Step 1: Pull Docker Image</h3>
+<img src="Screenshots/dockerpull.png">
+<code>docker pull nginx</code>
 
- nginx → Docker image name
+<p>This downloads the Nginx image from Docker Hub.</p>
 
-### Step 3: Verify Running Containers
-![Docker Run Nginx](./Screenshots/dockerrun.nginx.png)
+<h3>Step 2: Run Container</h3>
+<img src="Screenshots/dockerrun.png">
+<code>docker run -d -p 8080:80 nginx</code>
 
+<p>
+<b>-d</b> → Background mode <br>
+<b>-p</b> → Port mapping <br>
+</p>
 
-![Docker PS](./Screenshots/dockerps.png)
+<h3>Step 3: Verify Containers</h3>
+<img src="Screenshots/dockerrun.nginx.png">
+<img src="Screenshots/dockerps.png">
+<code>docker ps</code>
 
+<h3>Step 4: Stop & Remove Container</h3>
+<img src="Screenshots/dockerstop.png">
+<code>docker stop &lt;container_id&gt;</code>
 
+<img src="Screenshots/dockerrm.png">
+<code>docker rm &lt;container_id&gt;</code>
 
+<h3>Step 5: Remove Image</h3>
+<code>docker rmi nginx</code>
 
-To check running containers, execute: docker ps
+<p>This deletes the image and frees space.</p>
 
+<h2>Result</h2>
+<p>
+Docker images were pulled, containers executed, and lifecycle commands were performed successfully.
+</p>
 
+<h2>Conclusion</h2>
+<p>
+Docker provides a lightweight and efficient environment for application deployment.
+</p>
 
-This displays the container ID, image name, status, and port mapping.
+<h2>Viva Questions</h2>
+<ul>
+<li>What is a Docker image?</li>
+<li>What is a container?</li>
+<li>Difference between docker run and docker start?</li>
+<li>Why port mapping is used?</li>
+<li>Why containers are lightweight?</li>
+</ul>
 
-### Step 4: Stop and Remove Container To stop the running container: docker stop <container_id>
+<h2>Overall Conclusion</h2>
+<p>
+Containers are faster and efficient for deployment, while VMs provide stronger isolation.
+</p>
 
-![Docker Stop](./Screenshots/dockerstop.png)
+</div>
 
-
-
-To remove the container: docker rm <container_id>
-
-
-
-
-### Step 5: Remove Docker Image To remove the downloaded image: docker rmi nginx 
-
-![Docker Stop](./Screenshots/dockerstop.png)
-
-![Docker RM](./Screenshots/dockerrm.png)
-
-
-
-This frees disk space by deleting the unused image.
-
-Result
-                                                                                          
-Docker images were successfully pulled, containers were executed, and container lifecycle management commands were performed successfully.
-
-Conclusion
-
-This experiment demonstrated the use of Docker for application deployment using containers. Docker provides a lightweight, efficient, and portable environ ment for running applications, making it suitable for modern DevOps and cloud- native applications.
-
-Viva-Voce Questions (Very Important)
-
-What is a Docker image?
-What is a Docker container?
-Difference between docker run and docker start?
-Purpose of port mapping in Docker?
-Why are containers lightweight compared to VMs?
-Overall Conclusion
-This lab demonstrated virtualization using Vagrant + VirtualBox and containerization using Docker, highlighting clear performance and resource efficiency differences. Containers are better suited for rapid deployment and microservices, while VMs provide stronger isolation.
-
-Overall Conclusion
-
-This lab demonstrated virtualization using Vagrant + VirtualBox and containerization using Docker, highlighting clear performance and resource efficiency differences. Containers are better suited for rapid deployment and microservices, while VMs provide stronger isolation.
+</body>
+</html>

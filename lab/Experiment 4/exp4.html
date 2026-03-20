@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 4 - Docker Essentials</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
+
+        .navbar {
+            background: #0d1117;
+            color: white;
+            padding: 15px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 { color: #6a1b9a; }
+        h2 { border-bottom: 2px solid #ddd; }
+
+        img {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        code {
+            display: block;
+            background: #eee;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">Home</div>
+
+<div class="container">
+
+<h1>Experiment 4</h1>
+<p><b>Docker Essentials</b></p>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>Roll No:</b> R2142230048 <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>University:</b> UPES Dehradun
+</p>
+
+<h2>Screenshots</h2>
+
+<img src="Screenshots/screenshot1.png">
+<img src="Screenshots/screenshot2.png">
+<img src="Screenshots/screenshot3.png">
+<img src="Screenshots/screenshot4.png">
+<img src="Screenshots/screenshot5.png">
+<img src="Screenshots/screenshot6.png">
+<img src="Screenshots/screenshot7.png">
+<img src="Screenshots/screenshot8.png">
+<img src="Screenshots/screenshot9.png">
+<img src="Screenshots/screenshot10.png">
+<img src="Screenshots/screenshot11.png">
+<img src="Screenshots/screenshot12.png">
+<img src="Screenshots/screenshot13.png">
+<img src="Screenshots/screenshot14.png">
+<img src="Screenshots/screenshot15.png">
+<img src="Screenshots/screenshot16.png">
+<img src="Screenshots/screenshot17.png">
+<img src="Screenshots/screenshot18.png">
+<img src="Screenshots/screenshot19.png">
+<img src="Screenshots/screenshot20.png">
+<img src="Screenshots/screenshot21.png">
+<img src="Screenshots/screenshot22.png">
+<img src="Screenshots/screenshot23.png">
+<img src="Screenshots/screenshot24.png">
+<img src="Screenshots/screenshot25.png">
+<img src="Screenshots/screenshot26.png">
+<img src="Screenshots/screenshot27.png">
+<img src="Screenshots/screenshot28.png">
+<img src="Screenshots/screenshot29.png">
+<img src="Screenshots/screenshot30.png">
+<img src="Screenshots/screenshot31.png">
+
+<h2>Part 1: Flask App</h2>
+
+<code>
+mkdir my-flask-app  
+cd my-flask-app
+</code>
+
+<code>
+from flask import Flask  
+app = Flask(__name__)  
+
+@app.route('/')  
+def hello():  
+    return "Hello from Docker!"
+</code>
+
+<h2>Dockerfile</h2>
+
+<code>
+FROM python:3.9-slim  
+WORKDIR /app  
+COPY requirements.txt .  
+RUN pip install -r requirements.txt  
+COPY app.py .  
+EXPOSE 5000  
+CMD ["python", "app.py"]
+</code>
+
+<h2>.dockerignore</h2>
+
+<code>
+__pycache__/  
+.env  
+.vscode/  
+.git  
+</code>
+
+<h2>Build Commands</h2>
+
+<code>
+docker build -t my-flask-app .  
+docker images  
+docker tag my-flask-app:latest myapp:v1  
+</code>
+
+<h2>Run Container</h2>
+
+<code>
+docker run -d -p 5000:5000 my-flask-app  
+docker ps  
+docker logs container-name  
+</code>
+
+<h2>Multi-stage Build</h2>
+
+<code>
+FROM python:3.9-slim AS builder  
+RUN pip install -r requirements.txt  
+
+FROM python:3.9-slim  
+COPY --from=builder /app /app  
+</code>
+
+<h2>Docker Hub</h2>
+
+<code>
+docker login  
+docker push username/myapp  
+docker pull username/myapp  
+</code>
+
+<h2>Node.js Example</h2>
+
+<code>
+FROM node:18-alpine  
+WORKDIR /app  
+COPY . .  
+RUN npm install  
+CMD ["node", "app.js"]
+</code>
+
+<h2>Essential Commands</h2>
+
+<table>
+<tr><th>Command</th><th>Purpose</th></tr>
+<tr><td>docker build</td><td>Build image</td></tr>
+<tr><td>docker run</td><td>Run container</td></tr>
+<tr><td>docker ps</td><td>List containers</td></tr>
+<tr><td>docker images</td><td>List images</td></tr>
+</table>
+
+<h2>Conclusion</h2>
+<p>
+Docker simplifies deployment, improves portability, and supports modern DevOps workflows.
+</p>
+
+</div>
+
+</body>
+</html>

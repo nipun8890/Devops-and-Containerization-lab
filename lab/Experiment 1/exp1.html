@@ -1,95 +1,188 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Experiment</title>
+    <title>Experiment 1 - Docker</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
 
-.navbar {
-  background: #0d1117;
-  padding: 15px;
-}
+        .navbar {
+            background: #0d1117;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
 
-.navbar a {
-  color: white;
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-}
+        h1 { color: #2e7d32; }
+        h2 { border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+        h3 { margin-top: 20px; }
 
-h1 {
-  color: #238636;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-}
+        table, th, td {
+            border: 1px solid #ccc;
+        }
 
-ul {
-  line-height: 1.8;
-}
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
 
-code {
-  background: #eee;
-  padding: 3px 6px;
-  border-radius: 5px;
-}
-</style>
+        code {
+            background: #eee;
+            padding: 4px 6px;
+            border-radius: 5px;
+            display: block;
+            margin: 5px 0;
+        }
 
+        img {
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="navbar">
-  <a href="../../index.html">Home</a>
-</div>
+<div class="navbar">Home</div>
 
 <div class="container">
 
 <h1>Experiment 1</h1>
-<p><b>Title:</b> Introduction to Docker</p>
-<hr>
+<p><b>Introduction to Docker and Containerization</b></p>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>Roll No:</b> R2142230048 <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Course:</b> Containerization and DevOps Lab
+</p>
 
 <h2>Aim</h2>
-<p>Write your aim here...</p>
+<p>
+To understand containerization and Docker, install Docker, run commands,
+and compare containers vs virtual machines.
+</p>
 
 <h2>Objectives</h2>
 <ul>
-  <li>Objective 1</li>
-  <li>Objective 2</li>
-  <li>Objective 3</li>
+<li>Understand containerization</li>
+<li>Install Docker</li>
+<li>Run Docker container</li>
+<li>Compare containers vs VMs</li>
 </ul>
 
 <h2>Theory</h2>
-<p>Write theory here...</p>
 
-<h2>Steps / Procedure</h2>
-<ol>
-  <li>Step 1</li>
-  <li>Step 2</li>
-  <li>Step 3</li>
-</ol>
+<h3>What is Containerization?</h3>
+<p>
+Containerization packages applications with dependencies into containers,
+ensuring consistency across environments.
+</p>
 
-<h2>Commands</h2>
-<p><code>docker --version</code></p>
+<h3>Docker</h3>
+<p>
+Docker is a container platform that allows building and running apps efficiently.
+</p>
+
+<h3>Containers vs Virtual Machines</h3>
+
+<table>
+<tr><th>Feature</th><th>Containers</th><th>VMs</th></tr>
+<tr><td>OS Kernel</td><td>Shared</td><td>Separate</td></tr>
+<tr><td>Startup</td><td>Fast</td><td>Slow</td></tr>
+<tr><td>Resources</td><td>Low</td><td>High</td></tr>
+<tr><td>Size</td><td>Light</td><td>Heavy</td></tr>
+</table>
+
+<h2>System Requirements</h2>
+
+<h3>Hardware</h3>
+<ul>
+<li>64-bit system</li>
+<li>4GB RAM</li>
+<li>Virtualization enabled</li>
+</ul>
+
+<h3>Software</h3>
+<ul>
+<li>Windows 10/11</li>
+<li>Docker</li>
+<li>VS Code</li>
+<li>Git</li>
+</ul>
+
+<h2>Screenshots</h2>
+
+<img src="screenshots/downloadvirtualbox.png">
+<img src="screenshots/virtualbox.png">
+<img src="screenshots/vagrant.png">
+<img src="screenshots/vagrantup.png">
+<img src="screenshots/vagrant.ssh.png">
+<img src="screenshots/verifyingnginx.png">
+
+<h2>Procedure</h2>
+
+<h3>Install Docker</h3>
+<p>Download and start Docker Desktop</p>
+
+<h3>Verify WSL</h3>
+<code>wsl --list --verbose</code>
+
+<h3>Set WSL Version</h3>
+<code>wsl --set-version Ubuntu 2</code>
+
+<h3>Install Linux</h3>
+<code>wsl --install -d Debian</code>
+
+<h3>Commands</h3>
+<code>wsl</code>
+<code>wsl -d Ubuntu</code>
+<code>wsl --shutdown</code>
+
+<h2>Result</h2>
+<p>
+WSL and Docker successfully installed and working.
+</p>
 
 <h2>Conclusion</h2>
-<p>Write conclusion here...</p>
+<p>
+Containers are faster and lightweight. VMs provide better isolation.
+</p>
+
+<h2>Viva Questions</h2>
+<ul>
+<li>Difference between VM and container?</li>
+<li>Why containers are faster?</li>
+<li>What is hypervisor?</li>
+<li>Can containers run different OS?</li>
+<li>Why Docker is lightweight?</li>
+</ul>
+
+<h2>References</h2>
+<ul>
+<li>VirtualBox Docs</li>
+<li>Vagrant Docs</li>
+</ul>
 
 </div>
 

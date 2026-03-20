@@ -1,83 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Containerization-DevOps</title>
+    <title>DevOps & Containerization Lab</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #24292f;
-  margin: 40px;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+        }
 
-h1 {
-  border-bottom: 1px solid #d0d7de;
-  padding-bottom: 10px;
-}
+        .header {
+            background: #0d1117;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-h2 {
-  margin-top: 30px;
-  border-bottom: 1px solid #d0d7de;
-  padding-bottom: 5px;
-}
+        .header h1 {
+            margin: 0;
+        }
 
-a {
-  color: #0969da;
-  text-decoration: none;
-}
+        .container {
+            width: 85%;
+            margin: 40px auto;
+        }
 
-a:hover {
-  text-decoration: underline;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-ul {
-  line-height: 1.8;
-}
-</style>
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #e3f2fd;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            background: #0d1117;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Containerization-DevOps</h1>
+<div class="header">
+    <h1>Containerization & DevOps Lab</h1>
+    <p>Nipun Agrawal | UPES Dehradun</p>
+</div>
 
-<p>
-<b>GitHub Repository:</b> 
-<a href="https://github.com/nipun8890/Devops-and-Containerization-lab">
-View Repository
-</a>
-</p>
+<div class="container">
 
-<p>
-<b>Name:</b> Nipun Agrawal <br>
-<b>SAP ID:</b> 500119472
-</p>
+    <div class="grid">
 
----
+        <a class="card" href="lab/experiment1/exp1.html">
+            <h2>Experiment 1</h2>
+            <p>Introduction to Docker & Containerization</p>
+        </a>
 
-<h2>Assignment 1 - Project</h2>
-<ul>
-<li><a href="#">Container-WebApp</a></li>
-</ul>
+        <a class="card" href="lab/experiment2/exp2.html">
+            <h2>Experiment 2</h2>
+            <p>Docker Installation & Running Containers</p>
+        </a>
 
----
+        <a class="card" href="lab/experiment3/exp3.html">
+            <h2>Experiment 3</h2>
+            <p>NGINX Deployment & Image Comparison</p>
+        </a>
 
-<h2>Lab</h2>
-<ul>
-<a href="lab/Experiment 1/exp1.html">Experiment 1</a>
-<a href="lab/Experiment 2/exp2.html">Experiment 2</a>
-<a href="lab/Experiment 3/exp3.html">Experiment 3</a>
-<a href="lab/Experiment 4/exp4.html">Experiment 4</a>
-<li><a href="lab/Experiment 5/exp5.md">Experiment 5</a></li>
-<li><a href="lab/Experiment 6/exp6.md">Experiment 6</a></li>
-</ul>
+        <a class="card" href="lab/experiment4/exp4.html">
+            <h2>Experiment 4</h2>
+            <p>Docker Essentials & Multi-stage Builds</p>
+        </a>
 
----
+    </div>
 
-<h2>Theory</h2>
-<ul>
-<li><a href="theory/index.html">DevOps Theory Notes</a></li>
-</ul>
+</div>
+
+<div class="footer">
+    <p>© 2026 Nipun Agrawal | DevOps Lab</p>
+</div>
 
 </body>
 </html>
