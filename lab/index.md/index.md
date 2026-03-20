@@ -18,11 +18,14 @@ body {
   font-weight: bold;
 }
 
+.container {
+  margin-top: 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin-top: 20px;
 }
 
 .card {
@@ -63,36 +66,30 @@ This repository contains all my **DevOps & Containerization Lab Experiments**.
 ---
 
 ## 🧪 Experiments
-<div id="experiments" class="grid">
+<div id="experiments" class="container grid">
 
 <div class="card">
 <h3>🧪 Experiment 1</h3>
+<p>Introduction to Docker</p>
 <a class="button" href="Experiment%201/exp1.md">View</a>
 </div>
 
 <div class="card">
 <h3>🧪 Experiment 2</h3>
+<p>Docker Commands & Images</p>
 <a class="button" href="Experiment%202/exp2.md">View</a>
 </div>
 
 <div class="card">
 <h3>🧪 Experiment 3</h3>
+<p>Docker Compose & Multi-container</p>
 <a class="button" href="Experiment%203/exp3.md">View</a>
 </div>
 
 <div class="card">
 <h3>🧪 Experiment 4</h3>
+<p>Dockerfile, Tagging & Publishing</p>
 <a class="button" href="Experiment%204/ex4.md">View</a>
-</div>
-
-<div class="card">
-<h3>🧪 Experiment 5</h3>
-<a class="button" href="Experiment%205/exp5.md">View</a>
-</div>
-
-<div class="card">
-<h3>🧪 Experiment 6</h3>
-<a class="button" href="Experiment%206/exp6.md">View</a>
 </div>
 
 </div>
@@ -107,3 +104,11 @@ This repository contains all my **DevOps & Containerization Lab Experiments**.
 - **Subject:** DevOps & Containerization  
 
 </div>
+
+---
+
+## ⭐ Features
+✔ Modern UI  
+✔ Responsive layout  
+✔ Clean navigation  
+✔ GitHub Pages deployment  
