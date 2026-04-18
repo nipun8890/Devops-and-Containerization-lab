@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Containerization & DevOps Lab</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        h1 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        code, pre {
+            background: #1e1e1e;
+            color: #00ff9c;
+            padding: 10px;
+            border-radius: 6px;
+            display: block;
+            overflow-x: auto;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .images img {
+            width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .images img:hover {
+            transform: scale(1.05);
+        }
+
+        hr {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Containerization & DevOps Lab</h1>
+
+<div class="section">
+    <h2> Student Details</h2>
+    <p><strong>Name:</strong> Nipun Agrawal</p>
+    <p><strong>SAP ID:</strong> 500119472</p>
+    <p><strong>Batch:</strong> B3 (CCVT)</p>
+</div>
+
+<div class="section">
+    <h2>📸 Screenshots</h2>
+
+    <h3>Docker Setup & Containers</h3>
+    <div class="images">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135409.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135421.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135434.png">
+    </div>
+
+    <h3>Volumes & Persistence</h3>
+    <div class="images">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135449.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135506.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135519.png">
+    </div>
+
+    <h3>Networking & Logs</h3>
+    <div class="images">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135533.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135548.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135557.png">
+    </div>
+
+    <h3>Monitoring & Output</h3>
+    <div class="images">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135649.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135708.png">
+        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135721.png">
+    </div>
+</div>
+
+<div class="section">
+    <h2> Lab Experiment 5</h2>
+    <p><strong>Data Persistence, Volumes, Environment Variables, Networking, Logs & Monitoring</strong></p>
+</div>
+
+<div class="section">
+    <h2> Objectives</h2>
+    <ul>
+        <li>Understand Docker data persistence</li>
+        <li>Manage environment variables</li>
+        <li>Inspect logs and processes</li>
+        <li>Create Docker networks</li>
+        <li>Apply monitoring commands</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>⚙️ Prerequisites</h2>
+    <ul>
+        <li>Docker installed</li>
+        <li>Basic Docker commands knowledge</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Part 1 — Volumes & Data Persistence</h2>
+    <pre>docker run -it --name test-container ubuntu /bin/bash</pre>
+
+    <pre>docker run -d -v /app/data --name web1 nginx</pre>
+
+    <pre>docker volume create mydata
+docker run -d -v mydata:/app/data --name web2 nginx</pre>
+</div>
+
+<div class="section">
+    <h2>Part 2 — Bind Mount Config</h2>
+    <pre>docker run -d --name nginx-custom -p 8080:80 -v config:/etc/nginx nginx</pre>
+</div>
+
+<div class="section">
+    <h2>Part 3 — Volume Management</h2>
+    <pre>docker volume prune
+docker volume rm volume-name</pre>
+</div>
+
+<div class="section">
+    <h2>Part 4 — Environment Variables</h2>
+    <pre>docker run -d -e VAR=value my-app</pre>
+</div>
+
+<div class="section">
+    <h2>Part 5 — Logs & Monitoring</h2>
+    <pre>docker logs container-name
+docker stats</pre>
+</div>
+
+<div class="section">
+    <h2>Part 6 — Networking</h2>
+    <pre>docker network create my-network</pre>
+</div>
+
+<div class="section">
+    <h2>Conclusion</h2>
+    <ul>
+        <li>Learned Docker volumes</li>
+        <li>Configured environment variables</li>
+        <li>Used logs and monitoring</li>
+        <li>Implemented networking</li>
+    </ul>
+</div>
+
+</body>
+</html>
