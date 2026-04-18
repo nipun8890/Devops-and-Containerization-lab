@@ -1,174 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Containerization & DevOps Lab</title>
+    <title>Experiment 5 - DevOps Lab</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial;
             margin: 40px;
-            background-color: #f8f9fa;
-            line-height: 1.6;
+            color: #24292e;
         }
 
         h1, h2, h3 {
-            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
         }
 
-        h1 {
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        code, pre {
-            background: #1e1e1e;
-            color: #00ff9c;
-            padding: 10px;
-            border-radius: 6px;
-            display: block;
-            overflow-x: auto;
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
         }
 
         .section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
         }
 
-        .images img {
-            width: 300px;
-            margin: 10px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .images img:hover {
-            transform: scale(1.05);
-        }
-
-        hr {
-            margin: 30px 0;
+        code {
+            background: #f6f8fa;
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap;
+            border-radius: 6px;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Containerization & DevOps Lab</h1>
+<h1>Experiment 5</h1>
+<h2>Data Persistence, Volumes, Environment Variables, Networking, Logs & Monitoring</h2>
+
+<hr>
 
 <div class="section">
-    <h2> Student Details</h2>
-    <p><strong>Name:</strong> Nipun Agrawal</p>
-    <p><strong>SAP ID:</strong> 500119472</p>
-    <p><strong>Batch:</strong> B3 (CCVT)</p>
+<h2>📸 Docker Setup & Containers</h2>
+
+<img src="Screenshots/Screenshot%202026-04-18%20135409.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135421.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135434.png">
 </div>
 
 <div class="section">
-    <h2>📸 Screenshots</h2>
+<h2>📸 Volumes & Persistence</h2>
 
-    <h3>Docker Setup & Containers</h3>
-    <div class="images">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135409.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135421.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135434.png">
-    </div>
-
-    <h3>Volumes & Persistence</h3>
-    <div class="images">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135449.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135506.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135519.png">
-    </div>
-
-    <h3>Networking & Logs</h3>
-    <div class="images">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135533.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135548.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135557.png">
-    </div>
-
-    <h3>Monitoring & Output</h3>
-    <div class="images">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135649.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135708.png">
-        <img src="Experiment 5/Screenshots/Screenshot 2026-04-18 135721.png">
-    </div>
+<img src="Screenshots/Screenshot%202026-04-18%20135449.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135506.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135519.png">
 </div>
 
 <div class="section">
-    <h2> Lab Experiment 5</h2>
-    <p><strong>Data Persistence, Volumes, Environment Variables, Networking, Logs & Monitoring</strong></p>
+<h2>📸 Networking & Logs</h2>
+
+<img src="Screenshots/Screenshot%202026-04-18%20135533.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135548.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135557.png">
 </div>
 
 <div class="section">
-    <h2> Objectives</h2>
-    <ul>
-        <li>Understand Docker data persistence</li>
-        <li>Manage environment variables</li>
-        <li>Inspect logs and processes</li>
-        <li>Create Docker networks</li>
-        <li>Apply monitoring commands</li>
-    </ul>
+<h2>📸 Monitoring & Output</h2>
+
+<img src="Screenshots/Screenshot%202026-04-18%20135649.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135708.png">
+<img src="Screenshots/Screenshot%202026-04-18%20135721.png">
 </div>
 
-<div class="section">
-    <h2>⚙️ Prerequisites</h2>
-    <ul>
-        <li>Docker installed</li>
-        <li>Basic Docker commands knowledge</li>
-    </ul>
-</div>
+<hr>
 
-<div class="section">
-    <h2>Part 1 — Volumes & Data Persistence</h2>
-    <pre>docker run -it --name test-container ubuntu /bin/bash</pre>
+<h2>Objectives</h2>
+<ul>
+<li>Understand Docker data persistence</li>
+<li>Manage environment variables</li>
+<li>Inspect logs and monitoring</li>
+<li>Create Docker networks</li>
+</ul>
 
-    <pre>docker run -d -v /app/data --name web1 nginx</pre>
+<hr>
 
-    <pre>docker volume create mydata
-docker run -d -v mydata:/app/data --name web2 nginx</pre>
-</div>
+<h2>Sample Commands</h2>
 
-<div class="section">
-    <h2>Part 2 — Bind Mount Config</h2>
-    <pre>docker run -d --name nginx-custom -p 8080:80 -v config:/etc/nginx nginx</pre>
-</div>
+<code>
+docker volume create mydata
+docker run -d -v mydata:/app/data nginx
+docker logs container-name
+docker stats
+</code>
 
-<div class="section">
-    <h2>Part 3 — Volume Management</h2>
-    <pre>docker volume prune
-docker volume rm volume-name</pre>
-</div>
+<hr>
 
-<div class="section">
-    <h2>Part 4 — Environment Variables</h2>
-    <pre>docker run -d -e VAR=value my-app</pre>
-</div>
-
-<div class="section">
-    <h2>Part 5 — Logs & Monitoring</h2>
-    <pre>docker logs container-name
-docker stats</pre>
-</div>
-
-<div class="section">
-    <h2>Part 6 — Networking</h2>
-    <pre>docker network create my-network</pre>
-</div>
-
-<div class="section">
-    <h2>Conclusion</h2>
-    <ul>
-        <li>Learned Docker volumes</li>
-        <li>Configured environment variables</li>
-        <li>Used logs and monitoring</li>
-        <li>Implemented networking</li>
-    </ul>
-</div>
+<h2>Conclusion</h2>
+<p>
+Learned Docker volumes, environment variables, logs, monitoring, and networking.
+</p>
 
 </body>
 </html>
