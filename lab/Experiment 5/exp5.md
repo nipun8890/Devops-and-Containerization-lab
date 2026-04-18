@@ -7,6 +7,33 @@
 * **Batch:** B3 (CCVT)
 
 ---
+# 📸 Screenshots
+
+##  Docker Setup & Containers
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135409.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135421.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135434.png)
+
+---
+
+##  Volumes & Persistence
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135449.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135506.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135519.png)
+
+---
+
+##  Networking & Logs
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135533.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135548.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135557.png)
+
+---
+
+##  Monitoring & Output
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135649.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135708.png)
+![Screenshot](Experiment%205/Screenshots/Screenshot%202026-04-18%20135721.png)
 
 ##  Lab Experiment 5
 
