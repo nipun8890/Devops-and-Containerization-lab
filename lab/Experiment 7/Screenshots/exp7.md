@@ -14,11 +14,21 @@
 ---
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
+!## 📸 Screenshots
+
+## 📸 Screenshots
+
 ![Screenshot](Screenshots/Screenshot%202026-04-01%20085830.png)
 
 ![Screenshot](Screenshots/Screenshot%202026-04-01%20085839.png)
 
 ![Screenshot](Screenshots/Screenshot%202026-04-01%20085849.png)
+
+![Screenshot](Screenshots/Screenshot%202026-04-01%20085857.png)
+
+![Screenshot](Screenshots/Screenshot%202026-04-01%20085909.png)
 
 ![Screenshot](Screenshots/Screenshot%202026-04-01%20085917.png)
 
@@ -39,7 +49,6 @@
 ![Screenshot](Screenshots/Screenshot%202026-04-22%20225925.png)
 
 ![Screenshot](Screenshots/Screenshot%202026-04-22%20231324.png)
-
 ## 1. Aim
 
 To design and implement a complete CI/CD pipeline using Jenkins, integrating source code from GitHub, and building and pushing Docker images to Docker Hub.

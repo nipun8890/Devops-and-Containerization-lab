@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 7 - DevOps Lab</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            color: #24292e;
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 7</h1>
+<h2>CI/CD using Jenkins, GitHub and Docker Hub</h2>
+
+<hr>
+
+<div class="section">
+<h2>Student Details</h2>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Batch:</b> B3 (CCVT)
+</p>
+
+</div>
+
+<div class="section">
+<h2>Aim</h2>
+
+<p>
+To design and implement a complete CI/CD pipeline using Jenkins,
+integrating GitHub and Docker Hub for automated build and deployment.
+</p>
+
+</div>
+
+<div class="section">
+<h2>Objectives</h2>
+
+<ul>
+<li>Understand CI/CD workflow using Jenkins</li>
+<li>Create GitHub repository with Jenkinsfile</li>
+<li>Build Docker images from source code</li>
+<li>Store Docker Hub credentials securely</li>
+<li>Automate build & push using webhooks</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>📸 Jenkins & Docker Setup</h2>
+
+<!-- Add screenshots here if available -->
+<img src="Screenshots/setup1.png">
+<img src="Screenshots/setup2.png">
+</div>
+
+<div class="section">
+<h2>📸 Pipeline Execution</h2>
+
+<img src="Screenshots/pipeline1.png">
+<img src="Screenshots/pipeline2.png">
+</div>
+
+<div class="section">
+<h2>📸 Docker Hub Push</h2>
+
+<img src="Screenshots/dockerpush1.png">
+<img src="Screenshots/dockerpush2.png">
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Project Structure</h2>
+
+<code>
+my-app/
+├── app.py
+├── requirements.txt
+├── Dockerfile
+├── Jenkinsfile
+</code>
+
+</div>
+
+<div class="section">
+<h2>Application Code</h2>
+
+<code>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello from CI/CD Pipeline!"
+
+app.run(host="0.0.0.0", port=80)
+</code>
+
+</div>
+
+<div class="section">
+<h2>Dockerfile</h2>
+
+<code>
+FROM python:3.10-slim
+
+WORKDIR /app
+COPY . .
+
+RUN pip install -r requirements.txt
+
+EXPOSE 80
+CMD ["python", "app.py"]
+</code>
+
+</div>
+
+<div class="section">
+<h2>Jenkins Pipeline</h2>
+
+<code>
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git 'repo-url'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'docker build -t myapp .'
+            }
+        }
+
+        stage('Push') {
+            steps {
+                sh 'docker push myapp'
+            }
+        }
+    }
+}
+</code>
+
+</div>
+
+<div class="section">
+<h2>Sample Commands</h2>
+
+<code>
+docker compose up -d
+
+docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+
+docker build -t myapp .
+
+docker push myapp
+</code>
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Conclusion</h2>
+
+<p>
+This experiment demonstrated a complete CI/CD pipeline using Jenkins, GitHub,
+and Docker Hub. It automates build, integration, and deployment processes,
+making application delivery faster and more reliable.
+</p>
+
+</div>
+
+</body>
+</html>
