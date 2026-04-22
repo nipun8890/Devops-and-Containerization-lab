@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 6 - DevOps Lab</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            color: #24292e;
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 6</h1>
+<h2>Docker Run vs Docker Compose: Multi-Container Application Orchestration</h2>
+
+<hr>
+
+<div class="section">
+<h2>📸 Docker Run Setup</h2>
+
+<img src="Screenshots/Screenshot%202026-04-21%20221220.png">
+<img src="Screenshots/Screenshot%202026-04-21%20221242.png">
+<img src="Screenshots/Screenshot%202026-04-21%20221314.png">
+<img src="Screenshots/Screenshot%202026-04-21%20221414.png">
+</div>
+
+<div class="section">
+<h2>📸 Docker Compose Setup</h2>
+
+<img src="Screenshots/Screenshot%202026-04-21%20223544.png">
+<img src="Screenshots/Screenshot%202026-04-21%20223606.png">
+<img src="Screenshots/Screenshot%202026-04-21%20223628.png">
+<img src="Screenshots/Screenshot%202026-04-21%20223816.png">
+</div>
+
+<div class="section">
+<h2>📸 Multi-Container Execution</h2>
+
+<img src="Screenshots/Screenshot%202026-04-21%20224528.png">
+<img src="Screenshots/Screenshot%202026-04-21%20224642.png">
+<img src="Screenshots/Screenshot%202026-04-21%20224720.png">
+<img src="Screenshots/Screenshot%202026-04-21%20224818.png">
+</div>
+
+<div class="section">
+<h2>📸 WordPress & MySQL Setup</h2>
+
+<img src="Screenshots/Screenshot%202026-04-21%20225949.png">
+<img src="Screenshots/Screenshot%202026-04-21%20225956.png">
+<img src="Screenshots/Screenshot%202026-04-21%20230004.png">
+<img src="Screenshots/Screenshot%202026-04-21%20230433.png">
+</div>
+
+<div class="section">
+<h2>📸 Final Output & Verification</h2>
+
+<img src="Screenshots/Screenshot%202026-04-21%20230441.png">
+<img src="Screenshots/Screenshot%202026-04-21%20230547.png">
+<img src="Screenshots/Screenshot%202026-04-21%20230904.png">
+<img src="Screenshots/Screenshot%202026-04-21%20233103.png">
+</div>
+
+<hr>
+
+<h2>Objectives</h2>
+<ul>
+<li>Understand Docker Run (imperative approach)</li>
+<li>Learn Docker Compose (declarative approach)</li>
+<li>Deploy multi-container applications</li>
+<li>Manage networking, volumes, and environment variables</li>
+</ul>
+
+<hr>
+
+<h2>Sample Commands</h2>
+
+<code>
+docker run -d -p 8080:80 nginx
+
+docker compose up -d
+docker compose ps
+docker compose down
+
+docker network create wp-net
+docker run -d --network wp-net mysql
+docker run -d --network wp-net wordpress
+</code>
+
+<hr>
+
+<h2>Conclusion</h2>
+<p>
+This experiment demonstrated the difference between Docker Run and Docker Compose.
+Docker Run is useful for quick testing, while Docker Compose is ideal for managing
+multi-container applications in a structured and scalable way.
+</p>
+
+</body>
+</html>

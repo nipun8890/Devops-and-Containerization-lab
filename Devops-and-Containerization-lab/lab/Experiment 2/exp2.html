@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 2 - Docker Installation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        h1 {
+            color: #0077cc;
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Experiment 2</h1>
+<p><b>Docker Installation, Configuration, and Running Images</b></p>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>Roll No:</b> R2142230048 <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>University:</b> UPES Dehradun
+</p>
+
+<!-- IMAGES -->
+<h2>Screenshots</h2>
+
+<img src="Screenshots/dockerpull.png" alt="Docker Pull">
+<img src="Screenshots/dockerrun.png" alt="Docker Run">
+<img src="Screenshots/dockerps.png" alt="Docker PS">
+<img src="Screenshots/dockerstop.png" alt="Docker Stop">
+<img src="Screenshots/dockerrm.png" alt="Docker RM">
+<img src="Screenshots/dockerrun.nginx.png" alt="Docker Nginx">
+
+<h2>Aim</h2>
+<p>
+To install Docker, pull images, run containers, and manage container lifecycle.
+</p>
+
+<h2>Objectives</h2>
+<ul>
+    <li>Pull Docker images from Docker Hub</li>
+    <li>Run containers with port mapping</li>
+    <li>Verify running containers</li>
+    <li>Manage container lifecycle</li>
+</ul>
+
+<h2>Theory</h2>
+<p>
+Docker is a containerization platform that packages applications with dependencies into containers. 
+Containers are lightweight and faster than virtual machines.
+</p>
+
+<p>
+A Docker Image is a template. A Docker Container is a running instance of that image.
+</p>
+
+<h2>Software Requirements</h2>
+<ul>
+    <li>Windows OS</li>
+    <li>Docker Desktop (WSL)</li>
+    <li>Ubuntu</li>
+</ul>
+
+<h2>Procedure</h2>
+
+<h3>Step 1: Pull Docker Image</h3>
+<p><code>docker pull nginx</code></p>
+<p>This downloads the Nginx image from Docker Hub.</p>
+
+<h3>Step 2: Run Container</h3>
+<p><code>docker run -d -p 8080:80 nginx</code></p>
+<ul>
+    <li>-d → Background mode</li>
+    <li>-p → Port mapping</li>
+</ul>
+
+<h3>Step 3: Verify Containers</h3>
+<p><code>docker ps</code></p>
+
+<h3>Step 4: Stop & Remove Container</h3>
+<p><code>docker stop &lt;container_id&gt;</code></p>
+<p><code>docker rm &lt;container_id&gt;</code></p>
+
+<h3>Step 5: Remove Image</h3>
+<p><code>docker rmi nginx</code></p>
+<p>This deletes the image and frees space.</p>
+
+<h2>Result</h2>
+<p>
+Docker images were pulled, containers executed, and lifecycle commands were performed successfully.
+</p>
+
+<h2>Conclusion</h2>
+<p>
+Docker provides a lightweight and efficient environment for application deployment.
+</p>
+
+<h2>Viva Questions</h2>
+<ul>
+    <li>What is a Docker image?</li>
+    <li>What is a container?</li>
+    <li>Difference between docker run and docker start?</li>
+    <li>Why port mapping is used?</li>
+    <li>Why containers are lightweight?</li>
+</ul>
+
+<h2>Overall Conclusion</h2>
+<p>
+Containers are faster and efficient for deployment, while VMs provide stronger isolation.
+</p>
+
+</div>
+
+</body>
+</html>
