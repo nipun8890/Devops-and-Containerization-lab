@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 1 - Introduction to Docker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        h1 {
+            color: #0077cc;
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 5px;
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Experiment 1</h1>
+<p><b>Introduction to Docker and Containerization</b></p>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>Roll No:</b> R2142230048 <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Course:</b> Containerization and DevOps Lab
+</p>
+
+<h2>Aim</h2>
+<p>
+To understand containerization, install Docker, and compare containers with virtual machines.
+</p>
+
+<h2>Objectives</h2>
+<ul>
+    <li>Understand containerization</li>
+    <li>Install Docker</li>
+    <li>Run Docker containers</li>
+    <li>Compare containers and virtual machines</li>
+</ul>
+
+<h2>Theory</h2>
+
+<h3>Containerization</h3>
+<p>
+Containerization packages an application with all its dependencies into a container, ensuring consistent execution across environments.
+</p>
+
+<h3>Docker</h3>
+<p>
+Docker is a platform that allows building, running, and managing containers efficiently.
+</p>
+
+<h3>Containers vs Virtual Machines</h3>
+<ul>
+    <li>Containers share OS kernel</li>
+    <li>VMs run full OS</li>
+    <li>Containers are faster and lightweight</li>
+</ul>
+
+<h2>Screenshots</h2>
+
+<img src="screenshots/downloadvirtualbox.png">
+<img src="screenshots/virtualbox.png">
+<img src="screenshots/vagrant.png">
+<img src="screenshots/vagrantup.png">
+<img src="screenshots/vagrant.ssh.png">
+<img src="screenshots/verifyingnginx.png">
+
+<h2>Procedure</h2>
+
+<h3>Step 1: Install Docker</h3>
+<p>Download and install Docker Desktop.</p>
+
+<h3>Step 2: Verify WSL</h3>
+<code>wsl -l -v</code>
+
+<h3>Step 3: Set WSL Version</h3>
+<code>wsl --set-version Ubuntu 2</code>
+
+<h3>Step 4: Run Container</h3>
+<code>docker pull nginx</code>
+<code>docker run -d -p 8080:80 nginx</code>
+
+<h2>Virtual Machine Setup</h2>
+
+<code>vagrant init ubuntu/jammy64</code>
+<code>vagrant up</code>
+<code>vagrant ssh</code>
+
+<h2>Install Nginx</h2>
+
+<code>sudo apt update</code>
+<code>sudo apt install -y nginx</code>
+
+<h2>Comparison</h2>
+
+<ul>
+    <li>Containers → Fast & lightweight</li>
+    <li>VMs → Strong isolation</li>
+</ul>
+
+<h2>Result</h2>
+<p>
+Docker containers were successfully created and compared with virtual machines.
+</p>
+
+<h2>Conclusion</h2>
+<p>
+Containers are efficient, fast, and ideal for modern DevOps workflows.
+</p>
+
+<h2>Viva Questions</h2>
+<ul>
+    <li>What is containerization?</li>
+    <li>Difference between VM and container?</li>
+    <li>Why Docker is lightweight?</li>
+</ul>
+
+</div>
+
+</body>
+</html>
