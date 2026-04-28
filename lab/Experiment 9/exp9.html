@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 9 - DevOps Lab</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            color: #24292e;
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap;
+            border-radius: 6px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 9</h1>
+<h2>SonarQube - Static Code Analysis</h2>
+
+<hr>
+
+<div class="section">
+<h2>Student Details</h2>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Course:</b> Containerization and DevOps Lab
+</p>
+</div>
+
+<div class="section">
+<h2>📸 Screenshots</h2>
+
+<img src="Screenshot%202026-04-28%20182912.png">
+<img src="Screenshot%202026-04-28%20183350.png">
+<img src="Screenshot%202026-04-28%20185237.png">
+<img src="Screenshot%202026-04-28%20185302.png">
+<img src="Screenshot%202026-04-28%20185445.png">
+<img src="Screenshot%202026-04-28%20185851.png">
+<img src="Screenshot%202026-04-28%20190216.png">
+<img src="Screenshot%202026-04-28%20190515.png">
+<img src="Screenshot%202026-04-28%20190635.png">
+<img src="Screenshot%202026-04-28%20191220.png">
+<img src="Screenshot%202026-04-28%20193341.png">
+<img src="Screenshot%202026-04-28%20200937.png">
+<img src="Screenshot%202026-04-28%20200952.png">
+<img src="Screenshot%202026-04-28%20201001.png">
+<img src="Screenshot%202026-04-28%20201050.png">
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Objective</h2>
+
+<p>
+Perform static code analysis using SonarQube to detect bugs, vulnerabilities,
+code smells, and maintainability issues.
+</p>
+
+</div>
+
+<div class="section">
+<h2>Theory</h2>
+
+<h3>Problem Statement</h3>
+<p>
+Code issues are often discovered too late — during testing or after deployment.
+Manual code reviews are slow, not scalable, and may miss critical issues.
+</p>
+
+<h3>What is SonarQube?</h3>
+<p>
+SonarQube is an open-source platform for static code analysis.
+It analyzes source code without executing it and detects bugs,
+vulnerabilities, and code smells.
+</p>
+
+<h3>Key Terms</h3>
+
+<table>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Quality Gate</td><td>Rules code must pass before deployment</td></tr>
+<tr><td>Bug</td><td>Code that may break</td></tr>
+<tr><td>Vulnerability</td><td>Security weakness</td></tr>
+<tr><td>Code Smell</td><td>Poor quality code</td></tr>
+<tr><td>Technical Debt</td><td>Time required to fix issues</td></tr>
+<tr><td>Coverage</td><td>Percentage of tested code</td></tr>
+<tr><td>Duplication</td><td>Repeated code</td></tr>
+</table>
+
+</div>
+
+<div class="section">
+<h2>Architecture</h2>
+
+<p>
+Your Code → Sonar Scanner → SonarQube Server → PostgreSQL Database
+</p>
+
+</div>
+
+<div class="section">
+<h2>Prerequisites</h2>
+
+<ul>
+<li>Docker installed</li>
+<li>Docker Compose installed</li>
+<li>Terminal access</li>
+</ul>
+
+<code>
+docker --version
+docker-compose --version
+</code>
+
+</div>
+
+<div class="section">
+<h2>Steps</h2>
+
+<h3>Step 1: Start SonarQube</h3>
+<code>
+cd ~/Desktop/exp10
+docker-compose up -d
+docker-compose logs -f sonarqube
+docker ps
+</code>
+
+<h3>Step 2: Open Dashboard</h3>
+<code>
+http://localhost:9000
+username: admin
+password: admin
+</code>
+
+<h3>Step 3: Generate Token</h3>
+<code>
+export SONAR_TOKEN=your_token_here
+</code>
+
+<h3>Step 4: Run Analysis</h3>
+<code>
+sonar-scanner \
+-Dsonar.projectKey=my-app \
+-Dsonar.sources=. \
+-Dsonar.host.url=http://localhost:9000 \
+-Dsonar.token=$SONAR_TOKEN
+</code>
+
+<h3>Step 5: View Results</h3>
+<code>
+http://localhost:9000/dashboard?id=my-app
+</code>
+
+</div>
+
+<div class="section">
+<h2>Common Errors & Fixes</h2>
+
+<code>
+# Port already in use
+docker stop &lt;container_id&gt;
+
+# Node.js not found
+sudo apt install nodejs npm -y
+
+# Network issue
+docker-compose down
+docker-compose up -d
+</code>
+
+</div>
+
+<div class="section">
+<h2>Jenkins Integration</h2>
+
+<code>
+pipeline {
+    agent any
+    stages {
+        stage('SonarQube Analysis') {
+            steps {
+                sh 'mvn sonar:sonar'
+            }
+        }
+    }
+}
+</code>
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Conclusion</h2>
+
+<p>
+SonarQube improves code quality by detecting issues early,
+enhancing security, and automating code review in CI/CD pipelines.
+</p>
+
+</div>
+
+</body>
+</html>
