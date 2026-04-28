@@ -1,10 +1,22 @@
-# Experiment 11: Orchestration using Docker Compose & Docker Swarm
+# Experiment 10: Orchestration using Docker Compose & Docker Swarm
 
 **Name:** Nipun Agrawal
 **SAP ID:** 500119472
 **Course:** Containerization and DevOps Lab
 
 ---
+## 📸 Screenshots
+
+![Screenshot](Screenshot%202026-04-28%20235415.png)
+![Screenshot](Screenshot%202026-04-28%20235514.png)
+![Screenshot](Screenshot%202026-04-28%20235523.png)
+![Screenshot](Screenshot%202026-04-28%20235541.png)
+![Screenshot](Screenshot%202026-04-28%20235556.png)
+![Screenshot](Screenshot%202026-04-28%20235608.png)
+![Screenshot](Screenshot%202026-04-28%20235623.png)
+![Screenshot](Screenshot%202026-04-28%20235633.png)
+![Screenshot](Screenshot%202026-04-28%20235645.png)
+![Screenshot](Screenshot%202026-04-28%20235654.png)
 
 ## Objective
 
