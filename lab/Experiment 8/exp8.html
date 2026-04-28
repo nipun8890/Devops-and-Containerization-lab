@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 8 - DevOps Lab</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            color: #24292e;
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap;
+            border-radius: 6px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 8</h1>
+<h2>Ansible Automation</h2>
+
+<hr>
+
+<div class="section">
+<h2>Student Details</h2>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Batch:</b> B3 (CCVT)
+</p>
+</div>
+
+<div class="section">
+<h2>📸 Screenshots</h2>
+
+<img src="Screenshots/Screenshot%202026-04-15%20085015.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085028.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085033.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085042.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085051.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085059.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085107.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085115.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085122.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085133.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085139.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085148.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085612.png">
+<img src="Screenshots/Screenshot%202026-04-15%20085655.png">
+<img src="Screenshots/Screenshot%202026-04-15%20090302.png">
+<img src="Screenshots/Screenshot%202026-04-15%20090352.png">
+<img src="Screenshots/Screenshot%202026-04-15%20090716.png">
+<img src="Screenshots/Screenshot%202026-04-15%20090831.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091157.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091204.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091213.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091222.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091311.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091443.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091450.png">
+<img src="Screenshots/Screenshot%202026-04-15%20091457.png">
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Theory</h2>
+
+<h3>Problem Statement</h3>
+<p>
+Managing infrastructure manually across multiple servers leads to configuration drift,
+inconsistent environments, and repetitive work.
+</p>
+
+<h3>What is Ansible?</h3>
+<p>
+Ansible is an open-source automation tool used for configuration management,
+application deployment, and orchestration.
+</p>
+
+<ul>
+<li>Agentless (SSH based)</li>
+<li>YAML Playbooks</li>
+</ul>
+
+<h3>Key Concepts</h3>
+
+<table>
+<tr><th>Component</th><th>Description</th></tr>
+<tr><td>Control Node</td><td>Where Ansible runs</td></tr>
+<tr><td>Managed Nodes</td><td>Target systems</td></tr>
+<tr><td>Inventory</td><td>List of servers</td></tr>
+<tr><td>Playbooks</td><td>Automation files</td></tr>
+<tr><td>Tasks</td><td>Actions</td></tr>
+<tr><td>Modules</td><td>Built-in tools</td></tr>
+<tr><td>Roles</td><td>Reusable structure</td></tr>
+</table>
+
+</div>
+
+<div class="section">
+<h2>Installation</h2>
+
+<code>
+pip install ansible
+ansible --version
+
+sudo apt update -y
+sudo apt install ansible -y
+</code>
+
+</div>
+
+<div class="section">
+<h2>Test Command</h2>
+
+<code>
+ansible localhost -m ping
+</code>
+
+</div>
+
+<div class="section">
+<h2>Docker + SSH Setup</h2>
+
+<code>
+docker build -t ubuntu-server .
+docker run -d -p 2222:22 ubuntu-server
+ssh root@localhost -p 2222
+</code>
+
+</div>
+
+<div class="section">
+<h2>Ansible Inventory</h2>
+
+<code>
+[servers]
+172.17.0.2
+172.17.0.3
+172.17.0.4
+
+[servers:vars]
+ansible_user=root
+</code>
+
+</div>
+
+<div class="section">
+<h2>Playbook</h2>
+
+<code>
+- name: Configure servers
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install packages
+      apt:
+        name: vim
+        state: present
+</code>
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Conclusion</h2>
+
+<p>
+Ansible simplifies infrastructure management through automation.
+It ensures consistency, scalability, and faster deployment.
+</p>
+
+</div>
+
+</body>
+</html>
