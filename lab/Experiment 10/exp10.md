@@ -4,7 +4,6 @@
 **SAP ID:** 500119472
 **Course:** Containerization and DevOps Lab
 
----
 ## 📸 Screenshots
 
 ![Screenshot](Screenshots/Screenshot%202026-04-28%20235415.png)
