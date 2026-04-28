@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 11 - DevOps Lab</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            color: #24292e;
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap;
+            border-radius: 6px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 11</h1>
+<h2>Orchestration using Docker Compose & Docker Swarm</h2>
+
+<hr>
+
+<div class="section">
+<h2>Student Details</h2>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Course:</b> Containerization and DevOps Lab
+</p>
+</div>
+
+<div class="section">
+<h2>📸 Screenshots</h2>
+
+<img src="Screenshot%202026-04-28%20235415.png">
+<img src="Screenshot%202026-04-28%20235514.png">
+<img src="Screenshot%202026-04-28%20235523.png">
+<img src="Screenshot%202026-04-28%20235541.png">
+<img src="Screenshot%202026-04-28%20235556.png">
+<img src="Screenshot%202026-04-28%20235608.png">
+<img src="Screenshot%202026-04-28%20235623.png">
+<img src="Screenshot%202026-04-28%20235633.png">
+<img src="Screenshot%202026-04-28%20235645.png">
+<img src="Screenshot%202026-04-28%20235654.png">
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Objective</h2>
+
+<ul>
+<li>Deploy a stack</li>
+<li>Scale services</li>
+<li>Observe self-healing</li>
+<li>Manage multi-container applications</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Theory</h2>
+
+<h3>Problem Statement</h3>
+<p>
+Running containers manually works for simple applications, but real-world applications require
+scaling, reliability, and automation.
+</p>
+
+<h3>What is Orchestration?</h3>
+<p>
+Orchestration is the automatic management of containers including scaling,
+self-healing, load balancing, and service management.
+</p>
+
+<h3>Progression Path</h3>
+
+<code>
+docker run → Docker Compose → Docker Swarm → Kubernetes
+</code>
+
+<table>
+<tr><th>Level</th><th>Description</th></tr>
+<tr><td>docker run</td><td>Single container</td></tr>
+<tr><td>Compose</td><td>Multi-container (single machine)</td></tr>
+<tr><td>Swarm</td><td>Basic orchestration</td></tr>
+<tr><td>Kubernetes</td><td>Advanced orchestration</td></tr>
+</table>
+
+<h3>Compose vs Swarm</h3>
+
+<table>
+<tr><th>Feature</th><th>Docker Compose</th><th>Docker Swarm</th></tr>
+<tr><td>Scope</td><td>Single machine</td><td>Cluster</td></tr>
+<tr><td>Scaling</td><td>Limited</td><td>Built-in</td></tr>
+<tr><td>Self-healing</td><td>No</td><td>Yes</td></tr>
+<tr><td>Load balancing</td><td>No</td><td>Yes</td></tr>
+<tr><td>Use case</td><td>Development</td><td>Production</td></tr>
+</table>
+
+</div>
+
+<div class="section">
+<h2>Prerequisites</h2>
+
+<ul>
+<li>Docker installed</li>
+<li>Docker Compose installed</li>
+<li>Swarm mode enabled</li>
+<li>Experiment 6 setup</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>Practical Steps</h2>
+
+<h3>Step 1: Stop Existing Containers</h3>
+<code>
+docker compose down -v
+docker ps
+</code>
+
+<h3>Step 2: Initialize Swarm</h3>
+<code>
+docker swarm init
+docker node ls
+</code>
+
+<h3>Step 3: Deploy Stack</h3>
+<code>
+docker stack deploy -c docker-compose.yml wpstack
+</code>
+
+<h3>Step 4: Verify Deployment</h3>
+<code>
+docker service ls
+docker service ps wpstack_wordpress
+docker ps
+</code>
+
+<h3>Step 5: Access Application</h3>
+<code>
+http://localhost:8080
+</code>
+
+<h3>Step 6: Scale Application</h3>
+<code>
+docker service scale wpstack_wordpress=3
+</code>
+
+<h3>Step 7: Test Self-Healing</h3>
+<code>
+docker ps | grep wordpress
+docker kill &lt;container-id&gt;
+docker service ps wpstack_wordpress
+</code>
+
+<h3>Step 8: Remove Stack</h3>
+<code>
+docker stack rm wpstack
+docker service ls
+docker ps
+</code>
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Analysis</h2>
+
+<ul>
+<li>Same Compose file works in Swarm</li>
+<li>Swarm uses services instead of containers</li>
+<li>Scaling is automatic</li>
+<li>Self-healing replaces failed containers</li>
+<li>Load balancing is handled internally</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>Conclusion</h2>
+
+<p>
+Docker Swarm extends Docker Compose by adding orchestration, scaling,
+and self-healing capabilities. It acts as a bridge between basic container
+usage and advanced orchestration tools like Kubernetes.
+</p>
+
+</div>
+
+</body>
+</html>
