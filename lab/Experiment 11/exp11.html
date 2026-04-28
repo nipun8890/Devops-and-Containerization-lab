@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 11 - Kubernetes</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            color: #24292e;
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 10px;
+            display: block;
+            white-space: pre-wrap;
+            border-radius: 6px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 11</h1>
+<h2>Container Orchestration using Kubernetes</h2>
+
+<hr>
+
+<div class="section">
+<h2>Student Details</h2>
+
+<p>
+<b>Name:</b> Nipun Agrawal <br>
+<b>SAP ID:</b> 500119472 <br>
+<b>Course:</b> Containerization and DevOps Lab
+</p>
+</div>
+
+<div class="section">
+<h2>📸 Screenshots</h2>
+
+<img src="Screenshots/Screenshot%202026-04-29%20004454.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004511.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004524.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004535.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004546.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004559.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004614.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004627.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004639.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004649.png">
+<img src="Screenshots/Screenshot%202026-04-29%20004702.png">
+
+</div>
+
+<hr>
+
+<div class="section">
+<h2>Objective</h2>
+
+<p>
+To understand Kubernetes as a container orchestration platform and perform deployment, service exposure, scaling, and self-healing.
+</p>
+</div>
+
+<div class="section">
+<h2>Theory</h2>
+
+<h3>Problem Statement</h3>
+<p>
+Docker Swarm provides basic orchestration but lacks advanced scheduling, auto-scaling, and ecosystem support required for modern applications.
+</p>
+
+<h3>What is Kubernetes?</h3>
+<p>
+Kubernetes (K8s) is an open-source platform that automates deployment, scaling, and management of containerized applications.
+</p>
+
+<h3>Key Features</h3>
+<ul>
+<li>Declarative configuration using YAML</li>
+<li>Automatic scheduling</li>
+<li>Self-healing</li>
+<li>Auto-scaling</li>
+<li>Cloud-native support</li>
+</ul>
+
+<h3>Core Concepts</h3>
+
+<table>
+<tr><th>Docker Concept</th><th>Kubernetes Equivalent</th><th>Meaning</th></tr>
+<tr><td>Container</td><td>Pod</td><td>Smallest unit</td></tr>
+<tr><td>Compose Service</td><td>Deployment</td><td>Manages replicas</td></tr>
+<tr><td>Load Balancer</td><td>Service</td><td>Exposes pods</td></tr>
+<tr><td>Replicas</td><td>ReplicaSet</td><td>Maintains copies</td></tr>
+<tr><td>Machine</td><td>Node</td><td>Runs pods</td></tr>
+</table>
+
+</div>
+
+<div class="section">
+<h2>Prerequisites</h2>
+
+<ul>
+<li>Docker installed</li>
+<li>Kubernetes cluster (Minikube/k3d)</li>
+<li>kubectl installed</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>Practical Implementation</h2>
+
+<h3>Step 1: Start Cluster</h3>
+<code>
+minikube start
+kubectl get nodes
+</code>
+
+<h3>Step 2: Deployment</h3>
+<code>
+kubectl apply -f wordpress-deployment.yaml
+</code>
+
+<h3>Step 3: Service</h3>
+<code>
+kubectl apply -f wordpress-service.yaml
+</code>
+
+<h3>Step 4: Verify</h3>
+<code>
+kubectl get pods
+kubectl get svc
+</code>
+
+<h3>Step 5: Access</h3>
+<code>
+minikube ip
+http://&lt;ip&gt;:30007
+</code>
+
+<h3>Step 6: Scale</h3>
+<code>
+kubectl scale deployment wordpress --replicas=4
+kubectl get pods
+</code>
+
+<h3>Step 7: Self-Healing</h3>
+<code>
+kubectl delete pod &lt;pod-name&gt;
+kubectl get pods
+</code>
+
+</div>
+
+<div class="section">
+<h2>Swarm vs Kubernetes</h2>
+
+<table>
+<tr><th>Feature</th><th>Docker Swarm</th><th>Kubernetes</th></tr>
+<tr><td>Setup</td><td>Easy</td><td>Complex</td></tr>
+<tr><td>Scaling</td><td>Manual</td><td>Auto</td></tr>
+<tr><td>Self-healing</td><td>Basic</td><td>Advanced</td></tr>
+<tr><td>Ecosystem</td><td>Small</td><td>Huge</td></tr>
+<tr><td>Industry Use</td><td>Low</td><td>High</td></tr>
+</table>
+
+</div>
+
+<div class="section">
+<h2>Observations</h2>
+
+<ul>
+<li>Kubernetes maintains desired state automatically</li>
+<li>Services provide stable networking</li>
+<li>Scaling is simple and effective</li>
+<li>Self-healing ensures high availability</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>Result</h2>
+
+<p>
+WordPress deployed successfully, scaling and self-healing verified.
+</p>
+
+</div>
+
+<div class="section">
+<h2>Conclusion</h2>
+
+<p>
+Kubernetes provides automatic scaling, self-healing, and load balancing. It is the industry standard for modern application deployment.
+</p>
+
+</div>
+
+</body>
+</html>
