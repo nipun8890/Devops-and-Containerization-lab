@@ -7,17 +7,16 @@
 ---
 ## 📸 Screenshots
 
-![Screenshot](Screenshot%202026-04-28%20235415.png)
-![Screenshot](Screenshot%202026-04-28%20235514.png)
-![Screenshot](Screenshot%202026-04-28%20235523.png)
-![Screenshot](Screenshot%202026-04-28%20235541.png)
-![Screenshot](Screenshot%202026-04-28%20235556.png)
-![Screenshot](Screenshot%202026-04-28%20235608.png)
-![Screenshot](Screenshot%202026-04-28%20235623.png)
-![Screenshot](Screenshot%202026-04-28%20235633.png)
-![Screenshot](Screenshot%202026-04-28%20235645.png)
-![Screenshot](Screenshot%202026-04-28%20235654.png)
-
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235415.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235514.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235523.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235541.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235556.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235608.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235623.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235633.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235645.png)
+![Screenshot](Screenshots/Screenshot%202026-04-28%20235654.png)
 ## Objective
 
 Understand container orchestration by moving from Docker Compose to Docker Swarm.
